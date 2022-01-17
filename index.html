@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="UTF-8">
@@ -7,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Case Converter</h1>
     <form>
@@ -25,28 +27,29 @@
         }
         function lowFunc() {
             let x = document.getElementById("case")
-            let m = x. value;
+            let m = x.value;
             x.value = m.toLowerCase()
         }
         function propFunc() {
             let x = document.getElementById("case")
             let m = x.value;
-            x.value = m.toLowerCase().replace(/^(.)|\s+(.)/g, function(x) {return x.toUpperCase()})
+            x.value = m.toLowerCase().replace(/^(.)|\s+(.)/g, function (x) { return x.toUpperCase() })
         }
         function sentFunc() {
             let x = document.getElementById("case")
             let m = x.value;
-            x.value = m.toLowerCase().replace(/^(.)|\.(\s(.))/g, function(x) {return x.toUpperCase()})
+            x.value = m.toLowerCase().replace(/^(.)|\.(\s(.))/g, function (x) { return x.toUpperCase() })
         }
         function saveFunc() {
             let x = document.getElementById("case")
             let m = x.value
-            let blob = new Blob([m], {type: "text/plain"})
+            let blob = new Blob([m], { type: "text/plain" })
             let link = document.createElement("a")
             link.setAttribute("href", URL.createObjectURL(blob))
             link.setAttribute("download", "my-text.txt")
             link.click()
         }
     </script>
-</body> 
+</body>
+
 </html>
