@@ -37,12 +37,13 @@
             let m = x.value;
             x.value = m.toLowerCase().replace(/^(.)|\s+(.)/g, function (x) { return x.toUpperCase() })
         }
-        
+
         function sentFunc() {
             let x = document.getElementById("case")
             let m = x.value;
             x.value = m.toLowerCase().replace(/^(.)|\.(\s(.))/g, function (x) { return x.toUpperCase() })
         }
+        
         function saveFunc() {
             let x = document.getElementById("case")
             let m = x.value
